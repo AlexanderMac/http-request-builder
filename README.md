@@ -60,7 +60,7 @@ Cookie: csrftoken=123abc; sessionid=456def
 */
 ```
 
-This package builds a plain model from an object, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parse a plain http request, and creating an object model for it).
+This package builds a plain model from an object, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parsing a plain http request, and creating an object model for it).
 
 ## License
 This code available under the MIT License.
