@@ -9,7 +9,7 @@ A node package for building a plain http request from an object.
 * Building body with contentType:
   * multipart/form-data
   * application/x-www-form-urlencoded
-  * text/plain'
+  * text/plain
 
 ## Usage
 
