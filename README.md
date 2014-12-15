@@ -1,7 +1,7 @@
 http-request-builder
 ====================
 
-A node package for building a plain http request from an object.
+A node package for building HTTP request message from an object model.
 
 ## Features
 * Building headers (with parameters).
@@ -60,7 +60,7 @@ Cookie: csrftoken=123abc; sessionid=456def
 */
 ```
 
-This package builds a plain model from an object, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parses a plain http request, and creates an object model for it).
+This package builds HTTP request message from an object model, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parses HTTP request message, and creates an object model for it).
 
 ## License
 This code available under the MIT License.
