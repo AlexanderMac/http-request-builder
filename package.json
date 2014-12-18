@@ -1,14 +1,18 @@
 {
   "name": "http-request-builder",
   "version": "1.0.0",
-  "description": "A node package for building a plain http request from an object.",
+  "description": "A node package for building HTTP request message from an object model.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec --check-leaks"
   },
   "dependencies": {
-    "lodash": "^2.4.1",
-    "should": "^4.4.1"
+    "lodash": "^2.4.1",    
+    "underscore.string": "^2.4.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.3.1"
   },
   "repository": {
     "type": "git",
