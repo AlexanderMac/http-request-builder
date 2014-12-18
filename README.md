@@ -23,13 +23,13 @@ var requestObj = {
   protocolVersion: 'HTTP/2.1',
   host: 'localhost',
   headers: [ 
-    { name: 'Connection', values: [ { value: 'keep-alive', params: null } ] },          
-    { name: 'Cache-Control', values: [ { value: 'no-cache', params: null } ] },
-    { name: 'User-Agent', values: [ { value: 'Mozilla/5.0 (Windows NT 6.1 WOW64)', params: null } ]},
-    { name: 'Accept', values: [ { value: '*/*', params: null } ] },
+    { name: 'Connection', values: [ { value: 'keep-alive' } ] },          
+    { name: 'Cache-Control', values: [ { value: 'no-cache' } ] },
+    { name: 'User-Agent', values: [ { value: 'Mozilla/5.0 (Windows NT 6.1 WOW64)' } ]},
+    { name: 'Accept', values: [ { value: '*/*' } ] },
     { name: 'Accept-Encoding', values: [ 
-      { value: 'gzip', params: null },
-      { value: 'deflate', params: null }
+      { value: 'gzip' },
+      { value: 'deflate' }
     ]},
     { name: 'Accept-Language', values: [
       { value: 'en-US', params: 'q=0.6' },
