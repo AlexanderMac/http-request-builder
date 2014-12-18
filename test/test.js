@@ -368,7 +368,7 @@ describe('#build()', function() {
           { value: 'application/x-www-form-urlencoded', params: 'charset=UTF-8' } 
         ]},
         { name: 'Content-Length', values: [ 
-          { value: '301', params: null } 
+          { value: '301' } 
         ]}
       ]
     };
