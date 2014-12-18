@@ -19,9 +19,9 @@ var builder = require('http-request-builder');
 var requestObj = { 
   method: 'GET',
   protocol: 'HTTP',
-  url: 'localhost/test',
-  protocolVersion: 'HTTP/2.1',
-  host: 'localhost',
+  url: 'app.com/features?p1=v1',
+  protocolVersion: 'HTTP/1.1',
+  host: 'app.com',
   headers: [ 
     { name: 'Connection', values: [ { value: 'keep-alive' } ] },          
     { name: 'Cache-Control', values: [ { value: 'no-cache' } ] },
@@ -46,8 +46,8 @@ var request = builder.build(requestObj);
 
 // request now is a string:
 /*
-GET http://localhost/test HTTP/2.1
-HOST: localhost/test
+GET http://app.com/features?p1=v1 HTTP/1.1
+Host: app.com
 Connection: keep-alive   
 Cache-Control: no-cache
 User-Agent: Mozilla/5.0 (Windows NT 6.1 WOW64)
