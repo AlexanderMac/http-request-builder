@@ -1,7 +1,7 @@
 http-request-builder
 ====================
 
-A node package for building HTTP request message from an object model.
+A node package for building HTTP request message from an object model. Can be used on server and client sides.
 
 ## Features
 * Building headers (with parameters).
