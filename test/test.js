@@ -98,24 +98,23 @@ describe('#build()', function() {
       ''
     ];
     
-    it('should throw Error for invalid protocol or url', function() {
-      var ro = _.clone(requestObj, true);
-      ro.protocol = '//http';
-      builder.build.bind(null, ro).should.throw(InvalidRequestError, {
-        message: 'Host is null, invalid requestProtocol or requestUrl'
-      });
-      
-      ro = _.clone(requestObj, true);
-      ro.url = '//url.com';
-      builder.build.bind(null, ro).should.throw(InvalidRequestError, {
-        message: 'Host is null, invalid requestProtocol or requestUrl'
-      });
-    });
-    
     it('should build host-line for valid url', function() {
       var ro = _.clone(requestObj, true);
       var rm = _.clone(requestMsg, true);
       
+      ro.url = '/app.com/features?p1=v1';
+      rm[1] = 'HOST: app.com';
+      var actual = builder.build(ro);
+      actual.should.eql(rm.join('\n'));
+      
+      ro.url = '//app.com/features?p1=v1';
+      rm[1] = 'HOST: app.com';
+      var actual = builder.build(ro);
+      actual.should.eql(rm.join('\n'));
+      
+      ro.url = 'www.app.com/features?p1=v1';
+      rm[0] = 'GET http://www.app.com/features?p1=v1 HTTP/1.1',
+      rm[1] = 'HOST: app.com';
       var actual = builder.build(ro);
       actual.should.eql(rm.join('\n'));
     });
