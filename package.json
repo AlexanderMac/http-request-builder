@@ -1,6 +1,6 @@
 {
   "name": "http-request-builder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A node package for building HTTP request message from an object model.",
   "main": "index.js",
   "scripts": {
