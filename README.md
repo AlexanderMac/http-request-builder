@@ -3,6 +3,7 @@ http-request-builder
 
 A node package for building HTTP request message from an object model. Can be used on server and client sides.
 
+
 ## Features
 * Building headers (with parameters).
 * Building cookies.
@@ -10,6 +11,12 @@ A node package for building HTTP request message from an object model. Can be us
   * multipart/form-data
   * application/x-www-form-urlencoded
   * text/plain
+
+## Install 
+
+```
+npm i -S http-request-builder
+```
 
 ## Usage
 
@@ -43,9 +50,9 @@ var requestObj = {
 };
 
 var request = builder.build(requestObj);
+console.log(request);
 
-// request now is a string:
-/*
+/* will output:
 GET http://app.com/features?p1=v1 HTTP/1.1
 Host: app.com
 Connection: keep-alive   
@@ -62,9 +69,12 @@ Cookie: csrftoken=123abc; sessionid=456def
 
 This package builds HTTP request message from an object model, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parses HTTP request message, and creates an object model for it).
 
+
 ## License
+
 This code available under the MIT License.
 See License.md for details.  
+
 
 ## Authors
 
