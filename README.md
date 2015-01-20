@@ -12,7 +12,7 @@ A node package for building HTTP request message from an object model. Can be us
   * application/x-www-form-urlencoded
   * text/plain
 
-## Install 
+## Installation
 
 ```
 npm i -S http-request-builder
