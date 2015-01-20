@@ -49,8 +49,8 @@ var requestObj = {
   ]
 };
 
-var request = builder.build(requestObj);
-console.log(request);
+var requestMsg = builder.build(requestObj);
+console.log(requestMsg);
 
 /* will output:
 GET http://app.com/features?p1=v1 HTTP/1.1
