@@ -4,10 +4,11 @@
   "description": "A node package for building HTTP request message from an object model.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec --check-leaks"
+    "test": "node_modules/.bin/mocha --reporter spec --check-leaks"
   },
   "dependencies": {
-    "lodash": "^2.4.1",    
+    "http-const": "^1.0.2",
+    "lodash": "^2.4.1",
     "underscore.string": "^2.4.0"
   },
   "devDependencies": {
