@@ -1,13 +1,13 @@
 /*
  * http-request-builder
- * Copyright(c) 2014 AlexanderMac <amatsibarov@gmail.com>
+ * Copyright(c) 2014-2015 AlexanderMac <amatsibarov@gmail.com>
  * MIT Licensed
  */
 
-var _ = require('lodash');
-require('should');
-var builder = require('../index');
+var _                   = require('lodash');
+var builder             = require('../index');
 var InvalidRequestError = require('../lib/invalid-request-error');
+require('should');
 
 describe('#build()', function() {
   
