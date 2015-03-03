@@ -24,7 +24,10 @@
     "builder",
     "request"
   ],
-  "author": "AlexanderMac",
+  "author": {
+    "name": "Alexander Mac",
+    "email": "amatsibarov@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlexanderMac/http-request-builder/issues"
