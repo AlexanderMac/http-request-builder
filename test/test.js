@@ -43,25 +43,25 @@ describe('build()', () => {
       let ro = _.cloneDeep(requestObj);
       ro.method = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
+        message: 'Invalid request object. Method must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.url = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
+        message: 'Invalid request object. Url must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.protocol = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
+        message: 'Invalid request object. Protocol must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.protocolVersion = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
+        message: 'Invalid request object. ProtocolVersion must be defined'
       });
     });
 
