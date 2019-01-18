@@ -1,36 +1,37 @@
 http-request-builder
 ====================
 
-A node package for building HTTP request message from an object model. Can be used on server and client sides.
+Build HTTP request message from an object model. Can be used on server and client sides. To parse request message and create an object model for it, use [http-request-parser](https://github.com/AlexanderMac/http-request-parser).
 
+[![Build Status](https://travis-ci.org/AlexanderMac/http-request-parser.svg?branch=master)](https://travis-ci.org/AlexanderMac/http-request-parser)
+[![Code Coverage](https://codecov.io/gh/AlexanderMac/http-request-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/http-request-parser)
+[![npm version](https://badge.fury.io/js/http-request-parser.svg)](https://badge.fury.io/js/http-request-parser)
 
 ## Features
-* Building headers (with parameters).
-* Building cookies.
-* Building body with contentType:
-  * multipart/form-data
-  * application/x-www-form-urlencoded
-  * text/plain
+* Build HTTP request message:
+  - headers (with parameters)
+  - cookies
+  - body (with supported contentTypes: `multipart/form-data`, `application/x-www-form-urlencoded`, `text/plain`)
 
 ## Installation
 
-```
-npm i -S http-request-builder
+```sh
+$ npm i -S http-request-builder
 ```
 
 ## Usage
 
-```javascript
-var builder = require('http-request-builder');
+```js
+const builder = require('http-request-builder');
 
-var requestObj = { 
+let requestObj = { 
   method: 'GET',
   protocol: 'HTTP',
-  url: 'app.com/features?p1=v1',
+  url: 'example.com/features?p1=v1',
   protocolVersion: 'HTTP/1.1',
-  host: 'app.com',
+  host: 'example.com',
   headers: [ 
-    { name: 'Connection', values: [ { value: 'keep-alive' } ] },          
+    { name: 'Connection', values: [ { value: 'keep-alive' } ] },
     { name: 'Cache-Control', values: [ { value: 'no-cache' } ] },
     { name: 'User-Agent', values: [ { value: 'Mozilla/5.0 (Windows NT 6.1 WOW64)' } ]},
     { name: 'Accept', values: [ { value: '*/*' } ] },
@@ -49,13 +50,13 @@ var requestObj = {
   ]
 };
 
-var requestMsg = builder.build(requestObj);
+let requestMsg = builder.build(requestObj);
 console.log(requestMsg);
 
-/* will output:
+/* prints:
 GET http://app.com/features?p1=v1 HTTP/1.1
 Host: app.com
-Connection: keep-alive   
+Connection: keep-alive
 Cache-Control: no-cache
 User-Agent: Mozilla/5.0 (Windows NT 6.1 WOW64)
 Accept: /
@@ -67,15 +68,8 @@ Cookie: csrftoken=123abc; sessionid=456def
 */
 ```
 
-This package builds HTTP request message from an object model, which generates another [package](https://github.com/AlexanderMac/http-request-parser) (parses HTTP request message, and creates an object model for it).
+### Author
+Alexander Mac
 
-
-## License
-
-This code available under the MIT License.
-See License.md for details.  
-
-
-## Authors
-
-**Alexander Mac** ([amatsibarov@gmail.com](mailto:amatsibarov@gmail.com))
+### License
+Licensed under the MIT license.
