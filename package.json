@@ -1,19 +1,29 @@
 {
   "name": "http-request-builder",
-  "version": "1.2.0",
-  "description": "A node package for building HTTP request message from an object model.",
+  "version": "2.0.0-alpha",
+  "description": "Build HTTP request message from an object model",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --check-leaks"
+    "lint": "eslint --ext .js lib/ test/",
+    "test": "NODE_ENV=test mocha",
+    "coverage": "nyc npm test"
   },
   "dependencies": {
     "http-const": "^1.0.3",
-    "lodash": "^3.1.0",
-    "underscore.string": "^3.0.2"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "mocha": "^2.1.0",
-    "should": "^4.6.5"
+    "eslint": "^5.12.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "should": "^13.2.3"
   },
   "repository": {
     "type": "git",
@@ -22,7 +32,8 @@
   "keywords": [
     "http-utility",
     "builder",
-    "request"
+    "request",
+    "http"
   ],
   "author": {
     "name": "Alexander Mac",
