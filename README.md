@@ -68,8 +68,8 @@ Cookie: csrftoken=123abc; sessionid=456def
 */
 ```
 
-### Author
+## Author
 Alexander Mac
 
-### License
+## License
 Licensed under the MIT license.
