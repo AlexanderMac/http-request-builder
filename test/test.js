@@ -9,7 +9,7 @@ describe('build()', () => {
   describe('requestObject', () => {
     it('should throw error when requestObject is undefined', () => {
       should(builder.build.bind(null, null)).throw(InvalidRequestError, {
-        message: 'Invalid request object. requestObj must be not null'
+        message: 'Invalid request object. requestObj must be not undefined'
       });
     });
   });
@@ -43,25 +43,25 @@ describe('build()', () => {
       let ro = _.cloneDeep(requestObj);
       ro.method = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be not empty'
+        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.url = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be not empty'
+        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.protocol = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be not empty'
+        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
       });
 
       ro = _.cloneDeep(requestObj);
       ro.protocolVersion = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Method, url, protocol and protocolVersion must be not empty'
+        message: 'Invalid request object. Method, url, protocol and protocolVersion must be defined'
       });
     });
 
@@ -191,17 +191,17 @@ describe('build()', () => {
 
       ro.headers = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Headers list must be not empty'
+        message: 'Invalid request object. Headers list must be defined'
       });
 
       ro.headers = {};
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Headers list must be not empty'
+        message: 'Invalid request object. Headers list must be defined'
       });
 
       ro.headers = [];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Headers list must be not empty'
+        message: 'Invalid request object. Headers list must be defined'
       });
     });
 
@@ -210,26 +210,26 @@ describe('build()', () => {
 
       ro.headers[0].name = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Header name must be not empty. ' +
+        message: 'Invalid request object. Header name must be defined. ' +
                  'Data: ' + JSON.stringify(ro.headers[0])
       });
 
       ro = _.cloneDeep(requestObj);
       ro.headers[0].values = null;
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Header values list must be not empty. ' +
+        message: 'Invalid request object. Header values list must be defined. ' +
                  'Data: ' + JSON.stringify(ro.headers[0])
       });
 
       ro.headers[0].values = {};
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Header values list must be not empty. ' +
+        message: 'Invalid request object. Header values list must be defined. ' +
                  'Data: ' + JSON.stringify(ro.headers[0])
       });
 
       ro.headers[0].values = [];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Header values list must be not empty. ' +
+        message: 'Invalid request object. Header values list must be defined. ' +
                  'Data: ' + JSON.stringify(ro.headers[0])
       });
 
@@ -238,7 +238,7 @@ describe('build()', () => {
         { value: null }
       ];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Header value must be not empty. ' +
+        message: 'Invalid request object. Header value must be defined. ' +
                  'Data: ' + JSON.stringify(ro.headers[0])
       });
     });
@@ -326,12 +326,12 @@ describe('build()', () => {
 
       ro.cookie = [];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Cookie name-value pairs list must be not empty'
+        message: 'Invalid request object. Cookie name-value pairs list must be defined'
       });
 
       ro.cookie = {};
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Cookie name-value pairs list must be not empty'
+        message: 'Invalid request object. Cookie name-value pairs list must be defined'
       });
     });
 
@@ -343,7 +343,7 @@ describe('build()', () => {
         { name: 'sessionid', value: '456def' }
       ];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Cookie name or value must be not empty. ' +
+        message: 'Invalid request object. Cookie name or value must be defined. ' +
                  'Data: ' + JSON.stringify(ro.cookie[0])
       });
 
@@ -352,7 +352,7 @@ describe('build()', () => {
         { name: 'sessionid', value: '' }
       ];
       should(builder.build.bind(null, ro)).throw(InvalidRequestError, {
-        message: 'Invalid request object. Cookie name or value must be not empty. ' +
+        message: 'Invalid request object. Cookie name or value must be defined. ' +
                  'Data: ' + JSON.stringify(ro.cookie[1])
       });
     });
