@@ -3,9 +3,9 @@ http-request-builder
 
 Build HTTP request message from an object model. Can be used on server and client sides. To parse request message and create an object model for it, use [http-request-parser](https://github.com/AlexanderMac/http-request-parser).
 
-[![Build Status](https://travis-ci.org/AlexanderMac/http-request-parser.svg?branch=master)](https://travis-ci.org/AlexanderMac/http-request-parser)
-[![Code Coverage](https://codecov.io/gh/AlexanderMac/http-request-parser/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/http-request-parser)
-[![npm version](https://badge.fury.io/js/http-request-parser.svg)](https://badge.fury.io/js/http-request-parser)
+[![Build Status](https://travis-ci.org/AlexanderMac/http-request-builder.svg?branch=master)](https://travis-ci.org/AlexanderMac/http-request-builder)
+[![Code Coverage](https://codecov.io/gh/AlexanderMac/http-request-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/http-request-builder)
+[![npm version](https://badge.fury.io/js/http-request-builder.svg)](https://badge.fury.io/js/http-request-builder)
 
 ## Features
 * Build HTTP request message:
