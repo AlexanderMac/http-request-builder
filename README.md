@@ -1,6 +1,8 @@
 http-request-builder
 ====================
 
+# WARNING: this repo is not maintained anymore, use [http-z](https://github.com/AlexanderMac/http-z) instead.
+
 Build HTTP request message from an object model. Can be used on server and client sides. To parse request message and create an object model for it, use [http-request-parser](https://github.com/AlexanderMac/http-request-parser).
 
 [![Build Status](https://travis-ci.org/AlexanderMac/http-request-builder.svg?branch=master)](https://travis-ci.org/AlexanderMac/http-request-builder)
@@ -54,8 +56,8 @@ let requestMsg = builder.build(requestObj);
 console.log(requestMsg);
 
 /* prints:
-GET http://app.com/features?p1=v1 HTTP/1.1
-Host: app.com
+GET http://example.com/features?p1=v1 HTTP/1.1
+Host: example.com
 Connection: keep-alive
 Cache-Control: no-cache
 User-Agent: Mozilla/5.0 (Windows NT 6.1 WOW64)
