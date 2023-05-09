@@ -1,5 +1,5 @@
 # http-request-builder
-## WARNING :warning:: this repo is not maintained anymore, use [http-z](https://github.com/AlexanderMac/http-z) instead.
+## WARNING :warning:: This repo is not maintained anymore, use [http-z](https://github.com/AlexanderMac/http-z) instead.
 
 Build HTTP request message from an object model. Can be used on server and client sides. To parse request message and create an object model for it, use [http-request-parser](https://github.com/AlexanderMac/http-request-parser).
 
