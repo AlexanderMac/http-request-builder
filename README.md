@@ -1,7 +1,5 @@
-http-request-builder
-====================
-
-# WARNING: this repo is not maintained anymore, use [http-z](https://github.com/AlexanderMac/http-z) instead.
+# http-request-builder
+## WARNING :warning:: this repo is not maintained anymore, use [http-z](https://github.com/AlexanderMac/http-z) instead.
 
 Build HTTP request message from an object model. Can be used on server and client sides. To parse request message and create an object model for it, use [http-request-parser](https://github.com/AlexanderMac/http-request-parser).
 
@@ -9,20 +7,18 @@ Build HTTP request message from an object model. Can be used on server and clien
 [![Code Coverage](https://codecov.io/gh/AlexanderMac/http-request-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/http-request-builder)
 [![npm version](https://badge.fury.io/js/http-request-builder.svg)](https://badge.fury.io/js/http-request-builder)
 
-## Features
+### Features
 * Build HTTP request message:
   - headers (with parameters)
   - cookies
   - body (with supported contentTypes: `multipart/form-data`, `application/x-www-form-urlencoded`, `text/plain`)
 
-## Installation
-
+### Installation
 ```sh
 $ npm i -S http-request-builder
 ```
 
-## Usage
-
+### Usage
 ```js
 const builder = require('http-request-builder');
 
@@ -70,8 +66,8 @@ Cookie: csrftoken=123abc; sessionid=456def
 */
 ```
 
-## Author
+### Author
 Alexander Mac
 
-## License
+### License
 Licensed under the MIT license.
